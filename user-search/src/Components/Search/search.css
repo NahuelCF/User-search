@@ -1,0 +1,26 @@
+.search-container{
+    height: 13rem;
+    grid-template-rows: [start-title] 1fr [end-title start-search] 1fr [end-search];
+    grid-template-areas: "title" "search" ;
+    background-color: bisque;
+}
+
+.title-container{
+    grid-area: "title";
+    height: 40%;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.search-inputs{
+    display: flex;
+    justify-content: center;
+}
+
+.search-inputs *{
+    margin-right: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
