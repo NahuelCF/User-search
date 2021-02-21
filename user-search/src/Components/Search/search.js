@@ -1,4 +1,4 @@
-import { React, useContext, useEffect, useRef, useState } from "react"
+import { React, useState } from "react"
 
 import "./search.css"
 import { getUsersFromGitHub } from "../../service"
@@ -6,15 +6,17 @@ import { getUsersFromGitHub } from "../../service"
 export const Search = (props) => {
     const [api, setApi] = useState("")
     const [search, setSearch] = useState("")
+    const [users, setUsers] = useState([])
 
     const handleChange = (e) => {
         console.log(e.target.value)
         setApi(e.target.value)
     }
 
-    const searchUsers = () => {
+    const searchUsers = async () => {
         if (api == "github") {
-            getUsersFromGitHub(search)
+            const response = await getUsersFromGitHub(search)
+            setUsers(response)
         } else if (api == "gitlab") {
             console.log("gitlab")
         } else {
@@ -30,7 +32,7 @@ export const Search = (props) => {
                 </div>
                 <div className="search-inputs">
                     <input value={search} onChange={(e) => setSearch(e.target.value)}></input>
-                    <select name="API" onChange={handleChange}>
+                    <select onChange={handleChange}>
                         <option selected disabled>API</option>
                         <option value="github">GitHub</option>
                         <option value="gitlab">GitLab</option>
@@ -38,7 +40,9 @@ export const Search = (props) => {
                     <button onClick={searchUsers}>Search</button>
                 </div>
             </div>
-            <div>Resultados</div>
+            <div>
+                {[...users].map((user) => <div key={user.id}>{user.username}</div>)}
+            </div>
         </div>
     )
 }
