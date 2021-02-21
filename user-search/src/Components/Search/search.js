@@ -15,6 +15,10 @@ export const Search = (props) => {
     const searchUsers = () => {
         if (api == "github") {
             getUsersFromGitHub(search)
+        } else if (api == "gitlab") {
+            console.log("gitlab")
+        } else {
+            console.log("seleccione una api")
         }
     }
 
