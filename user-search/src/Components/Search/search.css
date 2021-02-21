@@ -1,5 +1,5 @@
 .search-container{
-    height: 13rem;
+    height: 11rem;
     grid-template-rows: [start-title] 1fr [end-title start-search] 1fr [end-search];
     grid-template-areas: "title" "search" ;
     background-color: bisque;
@@ -7,9 +7,9 @@
 
 .title-container{
     grid-area: "title";
-    height: 40%;
+    height: 45%;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 1.2rem;
     font-size: 2rem;
     font-weight: bold;
 }
