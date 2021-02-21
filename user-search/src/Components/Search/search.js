@@ -2,6 +2,7 @@ import { React, useState } from "react"
 
 import "./search.css"
 import { getUsersFromGitHub } from "../../service"
+import { UserCard } from "../UserCard/usercard"
 
 export const Search = (props) => {
     const [api, setApi] = useState("")
@@ -9,7 +10,6 @@ export const Search = (props) => {
     const [users, setUsers] = useState([])
 
     const handleChange = (e) => {
-        console.log(e.target.value)
         setApi(e.target.value)
     }
 
@@ -40,8 +40,8 @@ export const Search = (props) => {
                     <button onClick={searchUsers}>Search</button>
                 </div>
             </div>
-            <div>
-                {[...users].map((user) => <div key={user.id}>{user.username}</div>)}
+            <div className="results-container">
+                {[...users].map((user) => <UserCard key={user.id} user={user}>{user.username}</UserCard>)}
             </div>
         </div>
     )
