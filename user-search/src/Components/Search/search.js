@@ -1,7 +1,7 @@
 import { React, useState } from "react"
 
 import "./search.css"
-import { getUsersFromGitHub } from "../../service"
+import { getUsersFromGitHub, getUsersFromGitLab } from "../../service"
 import { UserCard } from "../UserCard/usercard"
 
 export const Search = (props) => {
@@ -18,7 +18,8 @@ export const Search = (props) => {
             const response = await getUsersFromGitHub(search)
             setUsers(response)
         } else if (api == "gitlab") {
-            console.log("gitlab")
+            const response = await getUsersFromGitLab(search)
+            setUsers(response)
         } else {
             console.log("seleccione una api")
         }

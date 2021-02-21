@@ -7,7 +7,7 @@ export class User {
 
     static fromJSON(userJSON) {
         return new User(
-            userJSON.login,
+            userJSON.login || userJSON.username,
             userJSON.id
         )
     }
