@@ -42,7 +42,7 @@ export const Search = (props) => {
                 </div>
             </div>
             <div className="results-container">
-                {[...users].map((user) => <UserCard key={user.id} user={user}>{user.username}</UserCard>)}
+                {[...users].map((user) => <UserCard key={user.id} user={user} history={props.history} api={api} />)}
             </div>
         </div>
     )
