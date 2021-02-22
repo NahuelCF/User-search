@@ -1,9 +1,9 @@
-import { Search } from './Components/Search/search';
+import { Routes } from './routes';
 
 function App() {
   return (
-    <Search></Search>
-  );
+    <Routes />
+  )
 }
 
 export default App;
