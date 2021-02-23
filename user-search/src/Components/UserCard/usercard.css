@@ -1,10 +1,5 @@
 .usercard{
     margin: 0 1rem 1.7rem 1rem;
-    /* border: 2px solid black;
-    border-radius: 5px; */
-    /* padding: 1rem; */
-    /* display: flex;
-    justify-content: space-evenly; */
     background-color: transparent;
     perspective: 1000px;
     cursor: pointer;
@@ -25,9 +20,6 @@
 }
 
 .usercard-front, .usercard-back {
-    /* position: absolute; */
-    /* width: 100%;
-    height: 100%; */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border: 2px solid black;
