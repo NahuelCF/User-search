@@ -12,7 +12,7 @@ export class User {
             userJSON.login || userJSON.username,
             userJSON.id,
             userJSON.avatar_url,
-            userJSON.url || userJSON.web_url
+            userJSON.html_url || userJSON.web_url
         )
     }
 }
