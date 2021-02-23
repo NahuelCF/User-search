@@ -1,0 +1,15 @@
+.profile-container{
+    background-color: lightseagreen;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.user-avatar{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 10px;
+}
