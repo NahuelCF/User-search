@@ -1,5 +1,5 @@
 .profile{
-    background-color: lightseagreen;
+    background-color: #00adb5;
     width: 25rem;
     display: flex;
     flex-direction: column;
@@ -25,4 +25,5 @@
     height: 15rem;
     border-radius: 10px;
     border: 2px solid black;
+    background-color: #d1d0d0;
 }

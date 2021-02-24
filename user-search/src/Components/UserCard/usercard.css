@@ -22,7 +22,7 @@
 .usercard-front, .usercard-back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
@@ -30,7 +30,7 @@
 }
 
 .usercard-front {
-    background-color: #eabf9f;
+    background-color: #00adb5;
     color: black;
 }
 

@@ -2,7 +2,7 @@
     height: 11rem;
     grid-template-rows: [start-title] 1fr [end-title start-search] 1fr [end-search];
     grid-template-areas: "title" "search" ;
-    background-color: bisque;
+    background-color: #222831;
     -webkit-box-shadow: 0px 3px 8px 0px rgba(50, 50, 50, 0.32);
     -moz-box-shadow:    0px 3px 8px 0px rgba(50, 50, 50, 0.32);
     box-shadow:         0px 3px 8px 0px rgba(50, 50, 50, 0.32);
@@ -15,6 +15,7 @@
     padding-top: 1.6rem;
     font-size: 2rem;
     font-weight: bold;
+    color: white;
 }
 
 .search-inputs{
@@ -26,6 +27,7 @@
     margin-right: 1rem;
     border-radius: 5px;
     font-size: 1rem;
+    border-color: white;
 }
 
 .search-inputs > select, button{
