@@ -1,4 +1,6 @@
 import { React, useState } from "react"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 import "./search.css"
 import { getUsersFromGitHub, getUsersFromGitLab } from "../../service"
@@ -8,6 +10,16 @@ export const Search = (props) => {
     const [api, setApi] = useState("")
     const [search, setSearch] = useState("")
     const [users, setUsers] = useState([])
+
+    const MySwal = withReactContent(Swal)
+
+    const alert = (icon, title, text) => {
+        MySwal.fire({
+            icon: icon,
+            title: title,
+            text: text
+        })
+    }
 
     const handleChange = (e) => {
         setApi(e.target.value)
@@ -21,7 +33,7 @@ export const Search = (props) => {
             const response = await getUsersFromGitLab(search)
             setUsers(response)
         } else {
-            console.log("seleccione una api")
+            alert("info", "Oops", "Choose an API before search")
         }
     }
 
