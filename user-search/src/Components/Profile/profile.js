@@ -25,14 +25,16 @@ export const Profile = (props) => {
 
     return (
         <div className="profile-container">
-            <img className="user-avatar" src={user.avatar_url}></img>
-            <h2>
-                {user.username}
-            </h2>
-            <h3>
-                ID: {user.id}
-            </h3>
-            <a href={user.profile_url} target="_blank">Go to Profile</a>
+            <div className="profile">
+                <img className="user-avatar" src={user.avatar_url}></img>
+                <h2>
+                    {user.username}
+                </h2>
+                <h3>
+                    ID: {user.id}
+                </h3>
+                <a href={user.profile_url} target="_blank">Go to Profile</a>
+            </div>
         </div>
     )
 }
