@@ -26,14 +26,18 @@ export const Search = (props) => {
     }
 
     const searchUsers = async () => {
-        if (api == "github") {
-            const response = await getUsersFromGitHub(search)
-            setUsers(response)
-        } else if (api == "gitlab") {
-            const response = await getUsersFromGitLab(search)
-            setUsers(response)
+        if (search.length == 0) {
+            alert("info", "There is no user to seach", "Write an username before search")
         } else {
-            alert("info", "Oops", "Choose an API before search")
+            if (api == "github") {
+                const response = await getUsersFromGitHub(search)
+                setUsers(response)
+            } else if (api == "gitlab") {
+                const response = await getUsersFromGitLab(search)
+                setUsers(response)
+            } else {
+                alert("info", "Oops", "Choose an API before search")
+            }
         }
     }
 
