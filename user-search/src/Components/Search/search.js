@@ -10,6 +10,7 @@ export const Search = (props) => {
     const [api, setApi] = useState("")
     const [search, setSearch] = useState("")
     const [users, setUsers] = useState([])
+    const [loader, setLoader] = useState("")
 
     const MySwal = withReactContent(Swal)
 
@@ -42,8 +43,10 @@ export const Search = (props) => {
             if (api.length == 0) {
                 alert("info", "Oops", "Choose an API before search")
             } else {
+                setLoader(<div className="loader"></div>)
                 const users = await getUserFromAPI(api)
                 setUsers(users)
+                setLoader("")
             }
         }
     }
@@ -65,6 +68,9 @@ export const Search = (props) => {
                 </div>
             </div>
             <div className="results-container">
+                <div className="loader-container">
+                    {loader}
+                </div>
                 {[...users].map((user) => <UserCard key={user.id} user={user} history={props.history} api={api} />)}
             </div>
         </div>
