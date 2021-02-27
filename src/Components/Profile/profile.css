@@ -13,7 +13,8 @@
     box-shadow:         0px 5px 12px 0px rgba(50, 50, 50, 0.64);
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("https://previews.123rf.com/images/vladgrin/vladgrin1303/vladgrin130300041/18540540-vector-de-fondo-se-compone-de-muchos-iconos-de-los-humanos-modernos-el-concepto-de-comunicaci%C3%B3n-entre-l.jpg");
+    background-image: url("../../Image/users.jpg");
+    color: white;
 }
 
 .profile-container{
@@ -32,4 +33,19 @@
     border-radius: 10px;
     border: 2px solid black;
     background-color: #d1d0d0;
+}
+
+@media all and (max-width: 401px){
+    .profile-container{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../../Image/users.jpg");
+    }
+
+    .profile{
+        background-image: none;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
 }

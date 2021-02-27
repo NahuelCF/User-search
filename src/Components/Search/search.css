@@ -68,3 +68,9 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+@media all and (max-width: 930px){
+    .results-container{
+        display: block;
+    }
+}
