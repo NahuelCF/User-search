@@ -58,13 +58,15 @@ export const Search = (props) => {
                     USER SEARCH
                 </div>
                 <div className="search-inputs">
-                    <input value={search} onChange={(e) => setSearch(e.target.value)}></input>
-                    <select onChange={handleChange}>
-                        <option selected disabled>API</option>
-                        <option value="github">GitHub</option>
-                        <option value="gitlab">GitLab</option>
-                    </select>
-                    <button onClick={searchUsers}>Search</button>
+                    <div className="inputs-up">
+                        <input placeholder="username..." value={search} onChange={(e) => setSearch(e.target.value)}></input>
+                        <select onChange={handleChange}>
+                            <option selected disabled>API</option>
+                            <option value="github">GitHub</option>
+                            <option value="gitlab">GitLab</option>
+                        </select>
+                    </div>
+                    <button style={{ gridArea: "down", width: "6rem", margin: "0" }} onClick={searchUsers}>Search</button>
                 </div>
             </div>
             <div className="results-container">
